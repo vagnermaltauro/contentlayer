@@ -1,3 +1,4 @@
+import { Analytics } from '@/components/analytics';
 import { ThemeProvider } from '@/components/theme-provider';
 
 import '@/styles/globals.css';
@@ -20,6 +21,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <div className="flex min-h-screen flex-col">
             <main className="flex-1">{children}</main>
           </div>
+          <Analytics />
         </ThemeProvider>
       </body>
     </html>
