@@ -3,4 +3,4 @@ build
 .next
 dist
 .contentlayer
-content/blog
+content/*
