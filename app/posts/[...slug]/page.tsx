@@ -6,6 +6,8 @@ import { Mdx } from '@/components/mdx-components';
 
 import '@/styles/mdx.css';
 
+import Image from 'next/image';
+
 interface PostProps {
   params: {
     slug: string[];
@@ -54,6 +56,16 @@ export default async function PostPage({ params }: PostProps) {
       <h1 className="mb-2">{post.title}</h1>
       {post.description && (
         <p className="text-xl mt-0 text-slate-700 dark:text-slate-200">{post.description}</p>
+      )}
+      {post.image && (
+        <Image
+          src={post.image}
+          alt={post.title}
+          width={720}
+          height={405}
+          className="my-8 rounded-md border bg-muted transition-colors"
+          priority
+        />
       )}
       <hr className="my-4" />
       <Mdx code={post.body.code} />

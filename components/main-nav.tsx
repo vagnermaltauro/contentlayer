@@ -11,10 +11,12 @@ export function MainNav() {
       <div className="container flex h-14 items-center">
         <div className="flex justify-between w-full">
           <nav className="text-sm flex items-center font-medium space-x-6">
-            <span className="flex items-center gap-2">
-              <Icons.logo />
-              <p className="text-lg font-bold">Contentlayer</p>
-            </span>
+            <Link href="/">
+              <span className="flex items-center gap-2">
+                <Icons.logo />
+                <p className="text-lg font-bold">Contentlayer</p>
+              </span>
+            </Link>
             <Link href="/">Home</Link>
             <Link href="/about">About</Link>
           </nav>
