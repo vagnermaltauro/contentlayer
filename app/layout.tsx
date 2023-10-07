@@ -1,4 +1,5 @@
 import { Analytics } from '@/components/analytics';
+import { MainNav } from '@/components/main-nav';
 import { ThemeProvider } from '@/components/theme-provider';
 
 import '@/styles/globals.css';
@@ -18,8 +19,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="en">
       <body className={inter.className}>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-          <div className="flex min-h-screen flex-col">
-            <main className="flex-1">{children}</main>
+          <MainNav />
+          <div className="max-w-2xl mx-auto py-10 px-4">
+            <main>{children}</main>
           </div>
           <Analytics />
         </ThemeProvider>
