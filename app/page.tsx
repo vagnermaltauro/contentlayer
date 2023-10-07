@@ -1,5 +1,17 @@
-import Image from 'next/image';
+import Link from 'next/link';
+import { allPosts } from '@/.contentlayer/generated';
 
 export default function Home() {
-  return <main className="flex min-h-screen flex-col items-center justify-between p-24"></main>;
+  return (
+    <div className="prose dark:prose-invert">
+      {allPosts.map((post) => (
+        <article key={post._id}>
+          <Link href={post.slug}>
+            <h2>{post.title}</h2>
+          </Link>
+          {post.description && <p>{post.description}</p>}
+        </article>
+      ))}
+    </div>
+  );
 }
