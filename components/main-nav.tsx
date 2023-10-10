@@ -17,7 +17,9 @@ export function MainNav() {
                 <p className="text-lg font-bold">Contentlayer</p>
               </span>
             </Link>
-            <Link href="/">Home</Link>
+            <Link className="hidden sm:flex" href="/">
+              Home
+            </Link>
             <Link href="/about">About</Link>
           </nav>
           <div className="flex items-center gap-1">
